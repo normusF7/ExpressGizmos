@@ -36,14 +36,14 @@ namespace ExpressGizmos
             _drawer.AddCapsuleGizmo(position, rotation, radius, height, segments, color, Time.time + duration);
         }
         
-        public static void DrawCapsule(Vector3 position, float radius, float height, int segments, float duration = 0.0f, Color color = default)
+        public static void DrawCapsule(Vector3 position, float radius, float height, int segments, Color color, float duration = 0.0f)
         {
             _drawer.AddCapsuleGizmo(position, Quaternion.identity, radius, height, segments, color, Time.time + duration);
         }
         
-        public static void DrawCapsule(Vector3 position, float radius, float height, Color color)
+        public static void DrawCapsule(Vector3 position, float radius, float height, Color color, float duration = 0.0f)
         {
-            _drawer.AddCapsuleGizmo(position, Quaternion.identity, radius, height, 14, color, Time.time);
+            _drawer.AddCapsuleGizmo(position, Quaternion.identity, radius, height, 14, color, Time.time + duration);
         }
         
         public static void DrawCylinder(Vector3 position, Quaternion rotation, float radius, float height, int segments, Color color, float duration = 0.0f)

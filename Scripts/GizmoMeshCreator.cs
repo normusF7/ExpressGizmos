@@ -40,6 +40,7 @@ namespace ExpressGizmos
             indices[1] = 1;
             indices[2] = 1;
             indices[3] = 2;
+            indices[4] = 2;
             indices[5] = 3;
             indices[6] = 3;
             indices[7] = 0;

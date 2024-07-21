@@ -17,25 +17,29 @@ namespace ExpressGizmos
             {
                 var mesh = meshes[i];
                 var transform = transforms[i];
-                
+
+                // Add vertices
                 var meshVertices = mesh.vertices;
                 for (var j = 0; j < meshVertices.Length; j++)
                 {
                     vertices.Add(transform.MultiplyPoint3x4(meshVertices[j]));
                 }
-                
+
+                // Add indices
                 var meshIndices = mesh.GetIndices(0);
                 for (var j = 0; j < meshIndices.Length; j++)
                 {
                     indices.Add(meshIndices[j] + vertexOffset);
                 }
-                
+
+                // Add colors if present
                 if (mesh.colors != null && mesh.colors.Length > 0)
                 {
                     colors.AddRange(mesh.colors);
                 }
                 else
                 {
+                    // If no colors, add white for each vertex
                     for (var j = 0; j < meshVertices.Length; j++)
                     {
                         colors.Add(Color.white);
