@@ -49,12 +49,12 @@ Add the following line to your `manifest.json` under `dependencies` in the `Pack
 ## Usage
 
 1. Add `using ExpressGizmos;` to the top of your script file.
-2. use static methods from `ExpressGizmos` class to draw shapes:
+2. use static methods from `ExpressDebug` class to draw shapes:
 
 ```csharp
-ExpressGizmos.DrawCube(Vector3.zero, Vector3.one, Color.red, 5f);
-ExpressGizmos.DrawSphere(new Vector3(2, 0, 0), 0.5f, Color.blue);
-ExpressGizmos.DrawArrow(Vector3.zero, Vector3.forward, 2, Color.green);
+ExpressDebug.DrawCube(Vector3.zero, Vector3.one, Color.red, 5f);
+ExpressDebug.DrawSphere(new Vector3(2, 0, 0), 0.5f, Color.blue);
+ExpressDebug.DrawArrow(Vector3.zero, Vector3.forward, 2, Color.green);
 ```
 
 ## Screenshots
